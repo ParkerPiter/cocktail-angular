@@ -1,0 +1,33 @@
+<div class="drinks">
+    <div class="drink-container">
+        <div class="drink-info">
+            <div class="drink-background">
+                <h2>{{drinks[j].name}}</h2>
+                <div class="drink-image-details">
+                    <img [src]="drinks[j].image" alt="{{ drinks[j].name }}">
+                    @if (showDetails) {
+                        <div class="drink-detail">
+                            <h3>Ingredientes:</h3>
+                            <ul>
+                                @for (ingredient of drinks[j].ingredients; track drinks[j].ingredients) {
+                                    <li>{{ingredient}}</li>
+                                }
+                            </ul>
+                            <h3>Medidas:</h3>
+                            <ul>
+                                @for (measure of drinks[j].measures; track drinks[j].measures){
+                                    <li>{{measure || 'a su gusto'}}</li>
+                                }
+                            </ul> 
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="util" (click)="restarIterador()" [disabled]="j === 0"><</button>
+        <button class="more" (click)="toggleDetails()">Ver ingredientes</button>
+        <button class="util" (click)="sumarIterador()" [disabled]="j === drinks.length - 1">></button>
+    </div>
+</div>

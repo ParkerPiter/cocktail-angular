@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+:root{
+    --var--color--primary: black;
+    --var--color--fonts: white;
+    --var--font--unique: "Satisfy";
+    --var--color--azul--oscuro: #000080;
+    --var--color--azul--claro: #ADD8E6;
+    --var--color--rosa: #FFC0CB;
+    --var--color--amarillo: #FFFF00;
+    --var--color--verder: #008000;
+    --var--color--purpura: #800080;
+}
+
+body{
+   
+    margin: 0;
+}
+
+h1{
+    font-family: var(--var--font--unique);
+    color: var(--var--color--azul--oscuro);
+}
+
+h2{
+    font-family: var(--var--font--unique);
+    font-weight: 400;
+    font-size: 48px;
+    color: var(--var--color--fonts);
+}
